@@ -16,7 +16,15 @@ function LandingPage() {
       <Header />
       <main>
         <HeroSection />
-        <CallToActionSection />
+        <CallToActionSection
+          className="bg-[url('../public/images/Social Proof/Star Wavy.svg')] bg-no-repeat bg-center bg-cover"
+          // style={{
+          //   backgroundImage: ["url('/images/Social Proof/Star Wavy.svg')"],
+          //   // backgroundSize: "cover",
+          //   backgroundPosition: "center",
+          //   backgroundRepeat: "no-repeat",
+          // }}
+        />
         <FeaturesSection />
         <AdvertiseSection />
         <FlashCardSection />

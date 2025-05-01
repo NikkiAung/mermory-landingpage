@@ -30,6 +30,19 @@ html {
 }
 
 @layer utilities {
+  @keyframes infinite-scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  .animate-infinite-scroll {
+    animation: infinite-scroll 25s linear infinite;
+  }
+
   @keyframes hover-color {
     0% {
       background-color: #007cb5;
@@ -52,7 +65,7 @@ html {
       transform: translateX(0);
     }
     50% {
-      transform: translateX(-8px); /* adjust this depending on direction */
+      transform: translateX(-8px);
     }
   }
 
@@ -66,7 +79,7 @@ html {
       transform: translateX(-8px);
     }
     50% {
-      transform: translateY(8px); /* for downward arrow */
+      transform: translateY(8px);
     }
   }
 
