@@ -1,1 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
 @import "tailwindcss";
+
+/* --------- *\
+ * Base
+\* --------- */
+
+@theme {
+  --font-figtree: "Figtree", "sans-serif";
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* --------- *\
+ * UTILITIES
+\* --------- */
+.container {
+  @apply px-4 mx-auto lg:px-8 xl:max-w-6xl;
+}
+
+.section {
+  @apply pt-20 lg:pt-32;
+}
+
+@layer utilities {
+  @keyframes hover-color {
+    0% {
+      background-color: #007cb5;
+    }
+    67% {
+      background-color: #76a5ea;
+    }
+    100% {
+      background-color: #bfadf2;
+    }
+  }
+
+  .btn-hover-animated:hover {
+    animation: hover-color 400ms ease-in-out forwards;
+  }
+}
+
+/* --------- *\
+ * COMPONENTS
+\* --------- */
+
+/* Button */
+.btn {
+  @apply px-6 py-2 rounded-full bg-[#007cb5] text-white transition-colors cursor-pointer;
+}
+
+.shadow-btn {
+  @apply px-6 py-2 text-black hover:bg-gray-200 hover:rounded-full rounded-full transition-colors duration-400;
+}
+
+/* Text Field  */
+.navbar-text {
+  @apply font-bold text-[16px];
+}
