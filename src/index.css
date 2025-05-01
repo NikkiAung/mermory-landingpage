@@ -21,7 +21,8 @@ html {
  * UTILITIES
 \* --------- */
 .container {
-  @apply px-4 mx-auto lg:px-8 xl:max-w-6xl;
+  /* @apply  px-4 mx-auto lg:px-8 xl:max-w-6xl; */
+  @apply px-4 py-5 mx-auto;
 }
 
 .section {
@@ -44,6 +45,34 @@ html {
   .btn-hover-animated:hover {
     animation: hover-color 400ms ease-in-out forwards;
   }
+
+  @keyframes point-to {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(-8px); /* adjust this depending on direction */
+    }
+  }
+
+  .animate-point-left {
+    animation: point-to 1s ease-in-out infinite;
+  }
+
+  @keyframes point-to-down {
+    0%,
+    100% {
+      transform: translateX(-8px);
+    }
+    50% {
+      transform: translateY(8px); /* for downward arrow */
+    }
+  }
+
+  .animate-point-down {
+    animation: point-to-down 1s ease-in-out infinite;
+  }
 }
 
 /* --------- *\
@@ -56,10 +85,10 @@ html {
 }
 
 .shadow-btn {
-  @apply px-6 py-2 text-[var(--primary-text-color)] hover:bg-gray-200 hover:rounded-full rounded-full transition-colors duration-400;
+  @apply px-6 py-2 text-[var(--primary-text-color)] hover:bg-gray-200 hover:rounded-full rounded-full transition-colors duration-400 cursor-pointer;
 }
 
 /* Text Field  */
 .navbar-text {
-  @apply font-bold text-[16px];
+  @apply font-bold text-[16px] cursor-pointer;
 }
