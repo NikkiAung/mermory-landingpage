@@ -40,7 +40,7 @@ const FeaturesSection = () => {
   return (
     <section id="features-section" className="pt-5 lg:pt-45">
       <div className="container flex flex-col gap-20">
-        <h2 className="text-5xl font-bold mx-auto">
+        <h2 className="title-card">
           <span className="bg-gradient-to-r from-[#2C9CE2] to-[#BFADF2] bg-clip-text text-transparent">
             3 Reasons
           </span>
@@ -51,7 +51,7 @@ const FeaturesSection = () => {
           {cardData.map((card, idx) => (
             <MotionCard key={idx} card={card} index={idx} />
           ))}
-          <motion.div className="progress" style={{ scaleX }} />
+          {/* <motion.div className="progress" style={{ scaleX }} /> */}
           <StyleSheet />
         </div>
       </div>

@@ -7,6 +7,7 @@
 
 :root {
   --primary-text-color: #001f2e;
+  --secondaty-text-color: #083347;
 }
 
 @theme {
@@ -106,4 +107,8 @@ html {
 /* Text Field  */
 .navbar-text {
   @apply font-bold text-[16px] cursor-pointer;
+}
+
+.title-card {
+  @apply text-5xl font-bold mx-auto;
 }
