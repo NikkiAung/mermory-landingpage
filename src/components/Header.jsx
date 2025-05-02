@@ -2,7 +2,7 @@ import Navbar from "./Navbar";
 
 const Header = () => {
   return (
-    <header className="top-0 left-0 w-full h-20">
+    <header className="top-0 left-0 w-full h-20" id="nav-section">
       <div className="max-w-screen-2xl w-full mx-auto py-5 flex justify-between items-center">
         <h1>
           <a href="/" className="logo">
